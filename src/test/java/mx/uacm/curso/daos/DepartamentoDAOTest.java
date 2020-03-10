@@ -34,7 +34,7 @@ public class DepartamentoDAOTest {
     }
     
     @Test
-    public void buscarArticuloTest(){
+    public void buscarDepartamentoTest(){
         
         Departamento d = departamentoDAO.buscarPorId(4);
         Assertions.assertNotNull(d);

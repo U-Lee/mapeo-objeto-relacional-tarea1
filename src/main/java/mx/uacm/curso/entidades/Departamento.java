@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
@@ -35,6 +36,7 @@ public class Departamento {
     @Id
     @Column(name = "id")
     @GeneratedValue(generator = "sec_dep", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "sec_dep", sequenceName = "departamento_id_seq", allocationSize = 1)    
     private Integer id;
 
     @Column(name = "nombre")
